@@ -25,10 +25,12 @@ const App = () => {
       <Router>
         <Fragment>
           <Navbar />
-          <Switch>
-            <Route exact path="/" component={Profiles} />
-            <Route component={Routes} />
-          </Switch>
+          <section className="container">
+            <Switch>
+              <Route exact path="/" component={Profiles} />
+              <Route component={Routes} />
+            </Switch>
+          </section>
         </Fragment>
       </Router>
     </Provider>
