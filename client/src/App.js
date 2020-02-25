@@ -24,11 +24,17 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Fragment>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Landing} />
-            <Route component={Routes} />
-          </Switch>
+          {loading ? (
+            <Spinner />
+          ) : (
+            <Fragment>
+              <Navbar />
+              <Switch>
+                <Route exact path="/" component={Profiles} />
+                <Route component={Routes} />
+              </Switch>
+            </Fragment>
+          )}
         </Fragment>
       </Router>
     </Provider>
